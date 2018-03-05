@@ -12,5 +12,9 @@ jobs:
     type: runSh
     steps:
       - IN: env-params-web-staging
+      - TASK:
+          script: "hello world"
+          
+          
       
       
