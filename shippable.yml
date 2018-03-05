@@ -4,7 +4,7 @@ resources:
     type: params
     versionTemplate:
       params:
-        TEMP_FF_ENABLE: false
+        TEMP_FF_ENABLE: true
         
 jobs:
 
@@ -13,7 +13,7 @@ jobs:
     steps:
       - IN: env-params-web-staging
       - TASK:
-          script: echo "hello world"
+          script: echo $TEMP_FF_ENABLE
           
           
       
