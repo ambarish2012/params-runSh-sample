@@ -13,7 +13,7 @@ jobs:
     steps:
       - IN: env-params-web-staging
       - TASK:
-          script: "hello world"
+          script: echo "hello world"
           
           
       
