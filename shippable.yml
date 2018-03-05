@@ -4,7 +4,7 @@ resources:
     type: params
     versionTemplate:
       params:
-        TEMP_FF_ENABLE: true
+        TEMP_FF_ENABLE: false
         
 jobs:
 
