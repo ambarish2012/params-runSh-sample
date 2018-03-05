@@ -10,6 +10,7 @@ jobs:
 
   - name: testParams
     type: runSh
+    allowPublicAccess: true
     steps:
       - IN: env-params-web-staging
       - TASK:
