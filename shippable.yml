@@ -21,7 +21,7 @@ jobs:
     allowPublicAccess: true
     steps:
       - IN: env-params-web-staging
-      - OUT: env-params-web-staging1
+      - OUT: intsched-vars-stage
       - TASK:
           script: 
             - echo $TEMP_FF_ENABLE
