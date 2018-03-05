@@ -1,0 +1,16 @@
+resources:
+
+  - name: env-params-web-staging
+    type: params
+    versionTemplate:
+      params:
+        TEMP_FF_ENABLE: true
+        
+jobs:
+
+  - name: testParams
+    type: runSh
+    steps:
+      - IN: env-params-web-staging
+      
+      
