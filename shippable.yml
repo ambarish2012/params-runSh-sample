@@ -34,10 +34,10 @@ jobs:
       - TASK:
           - script: >
               VERSION=5.5
-         - script: shipctl put_resource_state intsched-vars-stage version $VERSION
-         - script: >
-             VERSION="5.6"
-         - script: shipctl put_resource_state intsched-vars-stage1 version $VERSION
+          - script: shipctl put_resource_state intsched-vars-stage version $VERSION
+          - script: >
+              VERSION="5.6"
+          - script: shipctl put_resource_state intsched-vars-stage1 version $VERSION
             
           
           
