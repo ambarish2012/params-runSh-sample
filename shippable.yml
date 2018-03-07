@@ -52,7 +52,6 @@ jobs:
             - REPO_PATH=$INTSCHEDREPO_STATE
             - cd $REPO_PATH
             - REPO_SSH=$INTSCHEDREPO_SSH_URL
-            - git remote set-url origin $REPO_SSH
             - git checkout master
             - touch test$BUILD_NUMBER.txt
             - echo hello > test$BUILD_NUMBER.txt
