@@ -54,7 +54,7 @@ jobs:
             - REPO_SSH=$INTSCHEDREPO_SSH_URL
             - git clone https://ambarish2012:b39000916eb61129bd9072eb80f546e296182933@github.com/ambarish2012/params-runSh-sample.git
             - git remote rm origin
-git         - git remote add origin https://ambarish2012:b39000916eb61129bd9072eb80f546e296182933@github.com/ambarish2012/params-runSh-sample.git
+            - git remote add origin https://ambarish2012:b39000916eb61129bd9072eb80f546e296182933@github.com/ambarish2012/params-runSh-sample.git
             - touch test$BUILD_NUMBER.txt
             - echo hello > test$BUILD_NUMBER.txt
             - git add .
