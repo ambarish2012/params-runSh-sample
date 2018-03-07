@@ -53,9 +53,9 @@ jobs:
             - cd $REPO_PATH
             - mkdir testrepo && cd testrepo
             - pwd
-            - git clone https://ambarish2012:d039b9d6108e4574225bdf8fe967d11fe63c6c02@github.com/ambarish2012/params-runSh-sample.git
+            - git clone https://ambarish2012:cb0d8d7ea3ce61519bf7021aa4061f03bfdb1e4c@github.com/ambarish2012/params-runSh-sample.git
             - git remote rm origin
-            - git remote add origin https://ambarish2012:d039b9d6108e4574225bdf8fe967d11fe63c6c02@github.com/ambarish2012/params-runSh-sample.git
+            - git remote add origin https://ambarish2012:cb0d8d7ea3ce61519bf7021aa4061f03bfdb1e4c@github.com/ambarish2012/params-runSh-sample.git
             - touch test$BUILD_NUMBER.txt
             - echo hello > test$BUILD_NUMBER.txt
             - git add .
