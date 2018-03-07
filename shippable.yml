@@ -51,7 +51,8 @@ jobs:
           script:
             - REPO_PATH=$INTSCHEDREPO_STATE
             - cd $REPO_PATH
-            - REPO_SSH=$INTSCHEDREPO_SSH_URL
+            - mkdir testrepo && cd testrepo
+            - pwd
             - git clone https://ambarish2012:b39000916eb61129bd9072eb80f546e296182933@github.com/ambarish2012/params-runSh-sample.git
             - git remote rm origin
             - git remote add origin https://ambarish2012:b39000916eb61129bd9072eb80f546e296182933@github.com/ambarish2012/params-runSh-sample.git
