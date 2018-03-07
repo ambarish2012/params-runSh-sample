@@ -59,7 +59,7 @@ jobs:
             - echo hello > test$BUILD_NUMBER.txt
             - git add .
             - git commit -m '[skip ci] Release version bump'
-            - ssh-agent bash -c '$SSHACCESS_PRIVATE_KEY_PATH; git push -u origin master'
+            - git push origin master
             - VERSION=5.5
             - shipctl put_resource_state intsched-vars-stage version $VERSION
             - echo "$(shipctl get_resource_state intsched-vars-stage)"
