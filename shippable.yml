@@ -22,6 +22,16 @@ resources:
         ORG: providenceinnovation
         REPO: IntegratedScheduling
         
+  - name: INTSCHEDREPO
+    type: gitRepo
+    integration: github
+    versionTemplate:
+      sourceName: ambarish2012/params-runSh-sample
+      # Remove branch below if you want PRs to be triggered for all branches.
+      # If you want to trigger for some branches but not others, use branches tag
+      # as documented here: http://docs.shippable.com/platform/workflow/resource/gitrepo/#gitrepo
+      branch: master
+        
 jobs:
 
   - name: testParams
@@ -29,9 +39,15 @@ jobs:
     allowPublicAccess: true
     steps:
       - IN: env-params-web-staging
+      - IN: INTSCHEDREPO
       - OUT: intsched-vars-stage
       - OUT: intsched-vars-stage1
       - TASK:
+          script:
+            REPO_PATH=$INTSCHEDREPO_STATE
+            cd $REPO_PATH
+            VERSION=5.5
+            shipctl put_resource_state intsched-vars-stage version $VERSION
           - script: echo "$(shipctl get_resource_state intsched-vars-stage)"
           - script: ls -l /var/lib/shippable/build/OUT/intsched-vars-stage/params
           - script: cat /var/lib/shippable/build/OUT/intsched-vars-stage/params/version.json
