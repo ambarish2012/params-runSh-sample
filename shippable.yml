@@ -48,15 +48,7 @@ jobs:
             cd $REPO_PATH
             VERSION=5.5
             shipctl put_resource_state intsched-vars-stage version $VERSION
-          - script: echo "$(shipctl get_resource_state intsched-vars-stage)"
-          - script: ls -l /var/lib/shippable/build/OUT/intsched-vars-stage/params
-          - script: cat /var/lib/shippable/build/OUT/intsched-vars-stage/params/version.json
-          - script: >
-              VERSION=5.5
-          - script: shipctl put_resource_state intsched-vars-stage version $VERSION
-          - script: >
-              VERSION="5.6"
-          - script: shipctl put_resource_state intsched-vars-stage1 version $VERSION
+            echo "$(shipctl get_resource_state intsched-vars-stage)"
             
           
           
