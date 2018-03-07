@@ -31,7 +31,11 @@ resources:
       # If you want to trigger for some branches but not others, use branches tag
       # as documented here: http://docs.shippable.com/platform/workflow/resource/gitrepo/#gitrepo
       branch: master
-        
+ 
+  - name: sshaccess
+    type: integration
+    integration: params-runsh-sample
+    
 jobs:
 
   - name: testParams
@@ -40,6 +44,7 @@ jobs:
     steps:
       - IN: env-params-web-staging
       - IN: INTSCHEDREPO
+      - IN: sshaccess
       - OUT: intsched-vars-stage
       - OUT: intsched-vars-stage1
       - TASK:
