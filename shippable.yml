@@ -40,6 +40,9 @@ jobs:
 
   - name: testParams
     type: runSh
+    runtime:
+      nodePool: default123
+      container: true
     allowPublicAccess: true
     steps:
       - IN: env-params-web-staging
