@@ -4,7 +4,7 @@ resources:
     type: params
     version:
       params:
-        secure: F+fBILLQvdOeuRYTJTe+tu4teLrdhyC4noFQPKVlOXEa7jFwWd8ie9yBtc7MdcwiyA3O30XY/dBXQCvvzQCn1il4CJITLRN3K2fDTfcW/AJfLE+pVQjmv/OVQ7cFfC4YFwfRituevse/eP8KF5fcpEtXjwkFYHMMp/mUN/pqrZ+OvzVPXve0LKE6AXaaqlqfdZ/6DU0jW7HNKcsw/LYi5+Hvk/OKVPDqD2OKhKcb9t8Z+hI1vMqzzdvbI2OymaHbo5UPHczXL0B/yCBKVvhndKSCmdEHr3vvmiPgNcq6xygmFXZ28DAqCgV2BuAAtxMruXFkK76gRTte3uizPGpX5Q==
+        secure: sKhjI/hk1ZTe2hCzpvu+iXxaLCsrhiAjz+sjM9Gawr6C1ndLfVBRXqVS5FYS+BIt2cN8uIpNABDutcYGu6ioo4QgSFDQVeH02hTKiXfGUasKY8c5eFYI2/Bp0x+LEV3QBfmdUHZKrU2Wr6Skny0E+5mlHfat31hWdvfsLIs+oPxQC0IwU05rptKnTubyHoACqQlA8RZBGoUSKeatFNHUp7UDWJRYA4RN2fDtuqkX2ZCbXyqAMCaKrqbJQ0kXoz9iQpJEGCwjMmqf0XPlX2AN6VyQOIP2SP/cirSz7t259pMMUR8k6e4FtYLW8hfbX1Rco7sPSsuyUZeITjEGl4Lqfg==
 
 jobs:
 
@@ -16,5 +16,7 @@ jobs:
       - TASK:
           script:
             - echo $a
+            - echo $b
+            - echo $c
       
       
