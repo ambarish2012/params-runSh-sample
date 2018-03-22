@@ -1,74 +1,22 @@
 resources:
 
-  - name: env-params-web-staging
-    type: params
-    versionTemplate:
-      params:
-        TEMP_FF_ENABLE: true
         
-  - name: testparams
+  - name: test_secure_params
     type: params
     version:
       params:
-        ENV: nonprod
-        ORG: providenceinnovation
-        REPO: IntegratedScheduling
         secure: dyrBXSiHUnjrlMh6hlr3DN214l3lXDwfWukRdtHakZ1IXWJRXUEGEeIxowy6JTeaQrrq3HaNX9y7l2JmgJex+dwDe/qGTTm08Jr+bev7twHISCOW3I7kFjkWZ/28G6FMxKcsSD1eeNaWU1Mige3Gnu/yzRXMYXo1UVShJzCFe6Wh4tV/HMq+pafA1xhNh5sxInzW9PUUmUWdNRWhWDX117bmlkqLi3AWQUMlPlFV1qQcVouSGazYpgMoSq2bJWx3l8ZOoa0qBg20QnrRRqsl5fUm2zahT4aBRJoMFqf53IshHAKRBK7SQOyt67yxKUQdM2D6raM+UthZyC2NNn8H2Q==
   
-  - name: intsched-vars-stage1
-    type: params
-    version:
-      params:
-        ENV: nonprod
-        ORG: providenceinnovation
-        REPO: IntegratedScheduling
-        
-  - name: INTSCHEDREPO
-    type: gitRepo
-    integration: github
-    versionTemplate:
-      sourceName: ambarish2012/params-runSh-sample
-      # Remove branch below if you want PRs to be triggered for all branches.
-      # If you want to trigger for some branches but not others, use branches tag
-      # as documented here: http://docs.shippable.com/platform/workflow/resource/gitrepo/#gitrepo
-      branch: master
- 
-  - name: sshaccess
-    type: integration
-    integration: params-runsh-sample
     
 jobs:
 
-  - name: testParams
+  - name: test_secure_params_job
     type: runSh
     allowPublicAccess: true
     steps:
-      - IN: env-params-web-staging
-      - IN: INTSCHEDREPO
-      - IN: sshaccess
-      - IN: testparams
-      - OUT: intsched-vars-stage1
+      - IN: test_secure_params
       - TASK:
           script:
             - echo $a
-            - REPO_PATH=$INTSCHEDREPO_STATE
-            - cd $REPO_PATH
-            - mkdir testrepo && cd testrepo
-            - pwd
-            - git clone https://ambarish2012:cb0d8d7ea3ce61519bf7021aa4061f03bfdb1e4c@github.com/ambarish2012/params-runSh-sample.git
-            - git remote rm origin
-            - git remote add origin https://ambarish2012:cb0d8d7ea3ce61519bf7021aa4061f03bfdb1e4c@github.com/ambarish2012/params-runSh-sample.git
-            - touch test$BUILD_NUMBER.txt
-            - echo hello > test$BUILD_NUMBER.txt
-            - git add .
-            - git commit -m '[skip ci] Release version bump'
-            - git push origin master
-            - VERSION=5.5
-            - shipctl put_resource_state intsched-vars-stage1 version $VERSION
-            - echo "$(shipctl get_resource_state intsched-vars-stage)"
-            
-          
-          
-          
       
       
