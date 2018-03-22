@@ -5,8 +5,7 @@ resources:
     type: params
     version:
       params:
-        secure: fh3WQRmtLUBEo3KjuntuKIFTdoE2ahkLQIe6TKWeZaKvQj/rhu6tWtVuDneZT4D7NY6BE85HzDUggrzkJwI42j85rGehIVChlUcQfQa8Myce+h4jXDKM8bZ3VolhbOIlQT1gP9Sk3h/7q4Tj/EsEmYMNPmI5CN/29GcVduuJhtvAOjxf7k0Bs3hjQRZRvjL/43iqNi79OuOHaEPhRPi5kSQjx86I4ofQesDw++8ZacfeA6XUqqQUDI75ldY0294kK/SyWGbelDGcRRKIeOrBeC+XkQ0euGaJOYcAyqeefE3epitkb5z9xVwRqwgDwydEwengF3VZejZ2hdgJYSF+YQ==
-    
+        secure: N5MNlNxmczXVwgtXckWmvN5vdZy+lTdDKoB+SCE3EFsmXZMwzVgCuEsiwYwjqH8fNuHBnUgUnnL39CXwpaejqjWJ2iBSSVWQGCb8QqeDh4P39LpA5W98MDd75KIrimPkgOR2ZQyFjoGssQlcN+Z50aZuOLPMA1ncguFW/xs3j3DEeTFV+AwmSt3ZsjP6M11KtPKWLYIpiZSoT7rC0i5h35HBXO5JraUBWKol7oOlzIwFn7MgyZ/de0NVfeLyTw8Tndl4ZGXvzHHBZdB6iYYUDlzZPIo3lIVmF2Uyo2T8S0cSzG6zJpsGlUMEVky04/jQ5KvCMD1iggueb0zFIo6mGA==
 jobs:
 
   - name: test_secure_params_job
