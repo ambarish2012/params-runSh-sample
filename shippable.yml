@@ -2,7 +2,7 @@ resources:
         
   - name: test_secure_params
     type: params
-    version:
+    versionTemplate:
       params:
         secure: fse4RDVr814f7ZE05nuU9gdCd6PddItLvSQNzabxY2Xzp/PngVLf6aKyqBLfUY8mRPX8d6jLVE0nNoRQ7lwfHdBv7A9qlMI9GKj0yiQuxkQXt53km8RxPUR+W2bQnqxs4jAXrvpQFWV1L5nnrsPOGxXDRCkqVHGOQKlnmbP5sf0oXhDIiD1krl/emijUwi1p7WhGHIR69NEcZ6hQ+BN/5Rwi9GMDGGboP4K9fSQQFGlAiKE1beA2SNjv+QfX57fs0u7JWWkjwwdcG6dKP8jwCgB1Y4t/YrF/lGgenhiD381lCZwzD2f7FLEk0YLxIHNX3o8zlQPskahkIE41Ca4tvw==
 
