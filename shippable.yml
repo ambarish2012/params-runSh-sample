@@ -14,6 +14,7 @@ resources:
         ORG: providenceinnovation
         REPO: IntegratedScheduling
         secure: dyrBXSiHUnjrlMh6hlr3DN214l3lXDwfWukRdtHakZ1IXWJRXUEGEeIxowy6JTeaQrrq3HaNX9y7l2JmgJex+dwDe/qGTTm08Jr+bev7twHISCOW3I7kFjkWZ/28G6FMxKcsSD1eeNaWU1Mige3Gnu/yzRXMYXo1UVShJzCFe6Wh4tV/HMq+pafA1xhNh5sxInzW9PUUmUWdNRWhWDX117bmlkqLi3AWQUMlPlFV1qQcVouSGazYpgMoSq2bJWx3l8ZOoa0qBg20QnrRRqsl5fUm2zahT4aBRJoMFqf53IshHAKRBK7SQOyt67yxKUQdM2D6raM+UthZyC2NNn8H2Q==
+  
   - name: intsched-vars-stage1
     type: params
     version:
