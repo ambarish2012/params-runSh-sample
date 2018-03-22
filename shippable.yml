@@ -6,13 +6,14 @@ resources:
       params:
         TEMP_FF_ENABLE: true
         
-  - name: intsched-vars-stage
+  - name: testparams
     type: params
     version:
       params:
         ENV: nonprod
         ORG: providenceinnovation
         REPO: IntegratedScheduling
+        secure: j8y0McxKF83rTwioiaEv6dMGZv5tWYK1gXyPYdCpujcmT0lCzmfm+AL8ixJhtFf7Sp9EOcM2LmveUNstTLbr4h5okLaKfXRB15X1GLzsRVlJwlzC88pqTXRnq6Uwnd5/1FG7/un46X5zFY7RlNlndUNDyVaHi+oXmVE48S1m7y73X1EW1EZ6MrwgToqMc6xiSd/AyvgiutHkTwcTFCRVPLPVbDaHtOk5I1uro+4wE3a3RzeqMfl80NAH+oi/ut9O88IKpl6e7eqtSwpNcrdrrCXbVBNvTJfrrZB/zkfjGuk0Q66xg+trYBQqwYwnTn2rNV2UHVMA43NZq5ro3uO/2g== 
 
   - name: intsched-vars-stage1
     type: params
@@ -40,18 +41,16 @@ jobs:
 
   - name: testParams
     type: runSh
-    runtime:
-      nodePool: default123
-      container: true
     allowPublicAccess: true
     steps:
       - IN: env-params-web-staging
       - IN: INTSCHEDREPO
       - IN: sshaccess
-      - OUT: intsched-vars-stage
+      - IN: testparams
       - OUT: intsched-vars-stage1
       - TASK:
           script:
+            - echo $a
             - REPO_PATH=$INTSCHEDREPO_STATE
             - cd $REPO_PATH
             - mkdir testrepo && cd testrepo
@@ -65,7 +64,7 @@ jobs:
             - git commit -m '[skip ci] Release version bump'
             - git push origin master
             - VERSION=5.5
-            - shipctl put_resource_state intsched-vars-stage version $VERSION
+            - shipctl put_resource_state intsched-vars-stage1 version $VERSION
             - echo "$(shipctl get_resource_state intsched-vars-stage)"
             
           
